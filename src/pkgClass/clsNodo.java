@@ -7,19 +7,18 @@ package pkgClass;
 
 /**
  *
- * @author amartinez
+ * @author angelica
  */
-public class clsNodo <T>{
-    private T num;
-    private clsNodo <T> padre;
-    private clsNodo <T> izq;
-    private clsNodo <T> der;
+public class clsNodo {
+    private int num;
+    private clsNodo  izq;
+    private clsNodo  der;
     
 
     public clsNodo() {
     }
-    
-    public clsNodo(T num, clsNodo izq, clsNodo der) {
+
+    public clsNodo(int num, clsNodo izq, clsNodo der) {
         this.num = num;
         this.izq = izq;
         this.der = der;
@@ -28,23 +27,15 @@ public class clsNodo <T>{
     /**
      * @return the num
      */
-    public T getNum() {
+    public int getNum() {
         return num;
     }
 
     /**
      * @param num the num to set
      */
-    public void setNum(T num) {
+    public void setNum(int num) {
         this.num = num;
-    }
-    
-    public clsNodo getPadre() {
-        return padre;
-    }
-    
-    public void setPadre(clsNodo padre){
-        this.padre = padre;
     }
 
     /**
@@ -74,6 +65,8 @@ public class clsNodo <T>{
     public void setDer(clsNodo der) {
         this.der = der;
     }
+    
+    
 
     
 }

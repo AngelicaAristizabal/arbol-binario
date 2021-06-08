@@ -7,17 +7,17 @@ package pkgClass;
 
 /**
  *
- * @author amartinez
+ * @author angelica
  */
-public class clsArbol {
-
-    private clsNodo <Integer> root;
+public class clsArbol { 
+        
+    private clsNodo  root;
 
     public clsArbol() {
         this.root = null;
     }
 
-    public void insertar(clsNodo <Integer> dato, clsNodo <Integer> rootTmp) {
+    public void insertar(clsNodo dato, clsNodo rootTmp) {
         if (this.getRoot() == null) { // Si e árbol está vacio
             this.setRoot(dato);
         } else { // El "arbol" no está vacio
@@ -44,117 +44,68 @@ public class clsArbol {
         }
     }
     
-    public void listar(clsNodo rootTmp){
-        if (rootTmp != null){
+    public void Preorden (clsNodo rootTmp){
+      
+        if (rootTmp != null){ 
             System.out.println("Num: " + rootTmp.getNum());
-            if (rootTmp.getDer() != null){ // Tiene hijo por derecha?
-                listar(rootTmp.getDer());
-            }
             if (rootTmp.getIzq() != null){
-                listar(rootTmp.getIzq());
+                Preorden(rootTmp.getIzq());
+                 
+            }
+               if (rootTmp.getDer() != null){ // Tiene hijo por derecha? 
+                Preorden(rootTmp.getDer());
             }
         }
     }
-    public clsNodo getPdrGrup1(clsNodo nodo, clsNodo nodoSerch){
-        clsNodo pdreTem = null;
-        if (nodo.getIzq() != null){
-            if(nodoSerch == nodo.getIzq())
-            {
-                pdreTem = nodo;
-                return pdreTem;
+          
+        public void Inorden (clsNodo rootTmp){
+        if (rootTmp != null){
+            
+            if (rootTmp.getIzq() != null){
+                Inorden(rootTmp.getIzq());
+            }System.out.println("Num: " + rootTmp.getNum());
+             if (rootTmp.getDer() != null){ // Tiene hijo por derecha?
+                Inorden(rootTmp.getDer());
             }
-            else
-            {
-              getPdrGrup1(nodo.getIzq(),nodoSerch);  
+        }
+    }
+        
+            public void Posorden (clsNodo rootTmp){
+        if (rootTmp != null){
+            
+              if (rootTmp.getIzq() != null){
+               Posorden(rootTmp.getIzq());
             }
+          
+               if (rootTmp.getDer() != null){ // Tiene hijo por derecha?
+               Posorden(rootTmp.getDer());
+            }System.out.println("Num: " + rootTmp.getNum());
+        }
+    }
+            public boolean existe(int busqueda) {
+    return existe(this.root, busqueda);
+}
+
+private boolean existe(clsNodo n, int busqueda) {
+    if (n == null) {
+        return false;
+    }
+    if (n.getNum()== busqueda) {
+        return true;
+    } else if (busqueda < n.getNum()) {
+        return existe(n.getIzq(), busqueda);
+    } else {
+        return existe(n.getDer(), busqueda);
+    }
+         
+}
+
+   
+   
             
             
-        }
-        if (nodo.getDer() != null){ // Tiene hijo por derecha?
-            if(nodoSerch == nodo.getDer())
-            {
-                pdreTem = nodo;
-                return pdreTem;
-            }
-            else
-            {
-              getPdrGrup1(nodo.getDer(),nodoSerch);  
-            }
-        }
-        return pdreTem;
-    }
-    public String delGrup1(clsNodo rootTmp, String num){
-        if (rootTmp != null && num != "" ){
-            if(this.root.getNum() == rootTmp.getNum()){
-                return "No podemos borrar la raíz";
-            }
-            if(rootTmp.getNum() == num)
-            {
-                
-                if(rootTmp.getIzq() == null && rootTmp.getDer()== null){
-                    
-                    rootTmp = null;
-                }
-                if(rootTmp.getIzq() != null && rootTmp.getDer() == null){
-                    clsNodo pdreTem = getPdrGrup1(this.root,rootTmp);
-                    pdreTem.setIzq(rootTmp);
-                    
-                    rootTmp.setIzq(null);   
-                    rootTmp.setDer(null);
-                }
-                if(rootTmp.getIzq() == null && rootTmp.getIzq() != null){
-                    
-                    clsNodo pdreTem = getPdrGrup1(this.root,rootTmp);
-                    pdreTem.setDer(rootTmp);
-                    
-                    rootTmp.setIzq(null);   
-                    rootTmp.setDer(null);
-
-                }
-            }
-            else
-            {
-                if (rootTmp.getIzq() != null){
-                    delGrup1(rootTmp.getIzq(),num);
-                }
-                if (rootTmp.getDer() != null){ // Tiene hijo por derecha?
-                    delGrup1(rootTmp.getDer(),num);
-                }
-                
-            }   
-        }
-        return "No hay nada papi";
-    }
-    
-    public void buscarElim(clsNodo<Integer> dato, clsNodo<Integer> rootTmp) {   
-        if (getRoot() != null) {
-            if (dato.getNum() == rootTmp.getNum()) {
-                if (rootTmp.getIzq() == null && rootTmp.getDer() == null) {
-                    rootTmp.setNum(null);
-                    System.out.println("Se eliminó");
-                    return;
-                }else{
-                    System.out.println("No se puede eliminar, tiene hijos");
-                }
-            }
-            if (dato.getNum() != rootTmp.getNum()) {
-                if (rootTmp.getIzq() != null && dato.getNum() <= rootTmp.getNum()) {
-                    buscarElim(dato, rootTmp.getIzq());
-                } else {
-                    if (rootTmp.getDer() != null && dato.getNum() > rootTmp.getNum()) {     
-                        buscarElim(dato, rootTmp.getDer());
-                    } else {
-                        System.out.println("No está en el árbol");
-                    }
-                }
-            }
-        } else {
-            System.out.println("El arbol está vacío");
-        }
-    }
-    
-    
-
+            
+            
     /**
      * @return the root
      */

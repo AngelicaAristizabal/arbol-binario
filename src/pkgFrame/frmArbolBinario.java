@@ -10,7 +10,7 @@ import pkgClass.clsNodo;
 
 /**
  *
- * @author amartinez
+ * @author angelica   
  */
 public class frmArbolBinario extends javax.swing.JFrame {
     clsArbol arbol;
@@ -31,137 +31,137 @@ public class frmArbolBinario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnInsertar = new javax.swing.JButton();
-        btnListar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         txtNum = new javax.swing.JTextField();
-        btnBorradoGrupo1 = new javax.swing.JButton();
-        btnBorradoGrupo2 = new javax.swing.JButton();
-        btnBorradoGrupo3 = new javax.swing.JButton();
-        btnBorradoGrupo4 = new javax.swing.JButton();
-        btnBorradoGrupo5 = new javax.swing.JButton();
-        lblRespuesta = new javax.swing.JLabel();
+        btninsertar = new javax.swing.JButton();
+        btnpreorden = new javax.swing.JButton();
+        btninorden = new javax.swing.JButton();
+        btnposorden = new javax.swing.JButton();
+        btnbuscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnInsertar.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        btnInsertar.setText("Insertar");
-        btnInsertar.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 3, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setText("Arbol Binario");
+
+        btninsertar.setText("Insertar");
+        btninsertar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInsertarActionPerformed(evt);
+                btninsertarActionPerformed(evt);
             }
         });
 
-        btnListar.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        btnListar.setText("Listar");
-        btnListar.addActionListener(new java.awt.event.ActionListener() {
+        btnpreorden.setText("Pre-Orden");
+        btnpreorden.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnListarActionPerformed(evt);
+                btnpreordenActionPerformed(evt);
             }
         });
 
-        txtNum.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-
-        btnBorradoGrupo1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        btnBorradoGrupo1.setText("Borrado Grupo 1");
-        btnBorradoGrupo1.addActionListener(new java.awt.event.ActionListener() {
+        btninorden.setText("In-Orden");
+        btninorden.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBorradoGrupo1ActionPerformed(evt);
+                btninordenActionPerformed(evt);
             }
         });
 
-        btnBorradoGrupo2.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        btnBorradoGrupo2.setText("Borrado Grupo 2");
-
-        btnBorradoGrupo3.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        btnBorradoGrupo3.setText("Borrado Grupo 3");
-
-        btnBorradoGrupo4.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        btnBorradoGrupo4.setText("Borrado Grupo 4");
-
-        btnBorradoGrupo5.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        btnBorradoGrupo5.setText("Borrado Grupo 5");
-        btnBorradoGrupo5.addActionListener(new java.awt.event.ActionListener() {
+        btnposorden.setText("Pos-Orden");
+        btnposorden.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBorradoGrupo5ActionPerformed(evt);
+                btnposordenActionPerformed(evt);
             }
         });
 
-        lblRespuesta.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblRespuesta.setText("s");
+        btnbuscar.setText("Buscar");
+        btnbuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbuscarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtNum, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(btnBorradoGrupo1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnBorradoGrupo4))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(btnBorradoGrupo3)
-                        .addGap(42, 42, 42)
-                        .addComponent(lblRespuesta))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 9, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(btninorden)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnposorden)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnpreorden))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtNum, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnInsertar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(137, 137, 137)
+                                .addComponent(jLabel2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(29, 29, 29)
+                                .addComponent(btninsertar)
                                 .addGap(18, 18, 18)
-                                .addComponent(btnListar, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnBorradoGrupo2)
-                                .addGap(22, 22, 22)
-                                .addComponent(btnBorradoGrupo5)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(btnbuscar)))
+                        .addGap(2, 2, 2)))
+                .addContainerGap(16, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(84, 84, 84))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnInsertar)
-                    .addComponent(btnListar))
+                .addContainerGap()
+                .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBorradoGrupo1)
-                    .addComponent(btnBorradoGrupo4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(btninsertar)
+                    .addComponent(txtNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnbuscar))
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBorradoGrupo2)
-                    .addComponent(btnBorradoGrupo5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBorradoGrupo3)
-                    .addComponent(lblRespuesta))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btninorden)
+                    .addComponent(btnposorden)
+                    .addComponent(btnpreorden))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarActionPerformed
+    private void btninsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btninsertarActionPerformed
         // TODO add your handling code here:
         this.arbol.insertar(new clsNodo(Integer.parseInt(txtNum.getText()), null, null)  , this.arbol.getRoot());
-    }//GEN-LAST:event_btnInsertarActionPerformed
+    }//GEN-LAST:event_btninsertarActionPerformed
 
-    private void btnListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarActionPerformed
+    private void btnpreordenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpreordenActionPerformed
         // TODO add your handling code here:
-        this.arbol.listar(this.arbol.getRoot());
-    }//GEN-LAST:event_btnListarActionPerformed
+        this.arbol.Preorden(this.arbol.getRoot());
+    }//GEN-LAST:event_btnpreordenActionPerformed
 
-    private void btnBorradoGrupo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorradoGrupo1ActionPerformed
-        
-    }//GEN-LAST:event_btnBorradoGrupo1ActionPerformed
-
-    private void btnBorradoGrupo5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorradoGrupo5ActionPerformed
+    private void btninordenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btninordenActionPerformed
         // TODO add your handling code here:
-        this.arbol.buscarElim(new clsNodo(Integer.parseInt(txtNum.getText()),null ,null), this.arbol.getRoot());
-    }//GEN-LAST:event_btnBorradoGrupo5ActionPerformed
+        this.arbol.Inorden(this.arbol.getRoot());
+    }//GEN-LAST:event_btninordenActionPerformed
+
+    private void btnposordenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnposordenActionPerformed
+        // TODO add your handling code here:
+        this.arbol.Posorden(this.arbol.getRoot()); 
+    }//GEN-LAST:event_btnposordenActionPerformed
+
+    private void btnbuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscarActionPerformed
+        // TODO add your handling code here:
+      String  buscar;
+      this.txtNum.getText();
+      
+      
+    }//GEN-LAST:event_btnbuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,14 +199,13 @@ public class frmArbolBinario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBorradoGrupo1;
-    private javax.swing.JButton btnBorradoGrupo2;
-    private javax.swing.JButton btnBorradoGrupo3;
-    private javax.swing.JButton btnBorradoGrupo4;
-    private javax.swing.JButton btnBorradoGrupo5;
-    private javax.swing.JButton btnInsertar;
-    private javax.swing.JButton btnListar;
-    private javax.swing.JLabel lblRespuesta;
+    private javax.swing.JButton btnbuscar;
+    private javax.swing.JButton btninorden;
+    private javax.swing.JButton btninsertar;
+    private javax.swing.JButton btnposorden;
+    private javax.swing.JButton btnpreorden;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField txtNum;
     // End of variables declaration//GEN-END:variables
 }
